@@ -3,14 +3,14 @@ package com.martinnnachi;
 public class MethodChallenge {
     public static void main(String[] args) {
 
-        int position = calculateHighScorePosition( 1500 );
-        displayHighScorePosition( "Martin", position );
-        position = calculateHighScorePosition( 900 );
-        displayHighScorePosition( "Gloria", position );
-        position = calculateHighScorePosition( 400 );
-        displayHighScorePosition( "Alex", position );
-        position = calculateHighScorePosition( 50 );
-        displayHighScorePosition( "Edinam", position );
+        int playerScore = calculateHighScorePosition( 1500 );
+        displayHighScorePosition( "Martin", playerScore );
+        playerScore = calculateHighScorePosition( 900 );
+        displayHighScorePosition( "Gloria", playerScore );
+        playerScore = calculateHighScorePosition( 400 );
+        displayHighScorePosition( "Alex", playerScore );
+        playerScore = calculateHighScorePosition( 50 );
+        displayHighScorePosition( "Edinam", playerScore );
     }
 
     public static int calculateHighScorePosition(int score) {
