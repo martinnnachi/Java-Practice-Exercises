@@ -6,7 +6,7 @@
 
     <bean id="numberGenerator" class="com.martinnnachi.NumberGeneratorImpl"/>
     <bean id="game" class="com.martinnnachi.GameImpl">
-        <constructor-arg ref="numberGenerator"/>
+        <property name="numberGenerator" ref="numberGenerator"/>
     </bean>
 
 </beans>
