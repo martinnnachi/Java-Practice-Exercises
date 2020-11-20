@@ -2,7 +2,8 @@ package com.martinnnachi;
 
 import java.util.Random;
 
-public class NumberGeneratorImpl implements NumberGenerator{
+
+public class NumberGeneratorImpl implements NumberGenerator {
     // == Fields ==
     private final Random random = new Random();
     private final int maxNumber = 100;
@@ -10,7 +11,7 @@ public class NumberGeneratorImpl implements NumberGenerator{
     // == Public Methods ==
     @Override
     public int next() {
-        return random.nextInt(maxNumber);
+        return random.nextInt( maxNumber );
     }
 
     @Override
