@@ -1,5 +1,8 @@
 com\martinnnachi\GameImpl.class
+com\martinnnachi\MessageGeneratorImpl.class
 com\martinnnachi\NumberGenerator.class
+com\martinnnachi\MessageGenerator.class
 com\martinnnachi\Main.class
+com\martinnnachi\AppConfig.class
 com\martinnnachi\Game.class
 com\martinnnachi\NumberGeneratorImpl.class
