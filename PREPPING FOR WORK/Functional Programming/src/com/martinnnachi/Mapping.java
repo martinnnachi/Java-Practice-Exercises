@@ -1,6 +1,5 @@
 package com.martinnnachi;
 
-import java.awt.image.PackedColorModel;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -20,9 +19,7 @@ public class Mapping {
 
         Function<Integer, Integer> timesTwo = (x) -> x * 2;
         Predicate<Integer> isEven = (x) -> x % 2 == 0;
-        Function<Integer, Predicate<String>> createLengthTest = (minLength) -> {
-            return (str) -> str.length() > minLength;
-        };
+        Function<Integer, Predicate<String>> createLengthTest = (minLength) -> (str) -> str.length() > minLength;
 
         Predicate<String> isLongerThan3 = (createLengthTest.apply( 3 ));
         Predicate<String> isLongerThan5 = (createLengthTest.apply( 5 ));
@@ -48,7 +45,7 @@ public class Mapping {
 
         // Reduce //
         BinaryOperator<Integer> getSum = (acc, x) -> {
-            Integer result = acc + x;
+            int result = acc + x;
             System.out.println("acc: " + acc +", x: " + x + ", result: " + result);
             return result;
         };
