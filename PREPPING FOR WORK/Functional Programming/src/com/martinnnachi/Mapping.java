@@ -1,8 +1,10 @@
 package com.martinnnachi;
 
+import java.awt.image.PackedColorModel;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.BinaryOperator;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
@@ -12,6 +14,7 @@ public class Mapping {
     public static void main(String[] args) {
         Integer[] intArray = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         String[] wordsArr = {"Hello", "functional", "programming", "is", "cool"};
+
         List<Integer> listOfIntegers = new ArrayList<>( Arrays.asList( intArray ) );
         List<String> words = new ArrayList<>( Arrays.asList( wordsArr ) );
 
@@ -42,5 +45,17 @@ public class Mapping {
                 .map( timesTwo )
                 .collect( Collectors.toList() );
         System.out.println( "Doubled: " + doubled );
+
+        // Reduce //
+        BinaryOperator<Integer> getSum = (acc, x) -> {
+            Integer result = acc + x;
+            System.out.println("acc: " + acc +", x: " + x + ", result: " + result);
+            return result;
+        };
+
+        Integer sum = listOfIntegers
+                .stream()
+                .reduce( 0,  getSum );
+        System.out.println(sum);
     }
 }
