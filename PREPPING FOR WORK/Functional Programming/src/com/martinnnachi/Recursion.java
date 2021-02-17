@@ -5,7 +5,7 @@ public class Recursion {
     public static void main(String[] args) {
         countDown( 10 );
         System.out.println( "======" );
-        countUp( 1 ,1000);
+        countUp( 1, 1000 );
     }
 
     public static void countDown(int x) {
