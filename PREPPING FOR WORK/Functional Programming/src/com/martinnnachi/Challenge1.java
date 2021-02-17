@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.StringJoiner;
 import java.util.stream.Collectors;
 
-public class Challenges {
+public class Challenge1 {
     static class Person {
         public final String name;
         public final Integer age;
